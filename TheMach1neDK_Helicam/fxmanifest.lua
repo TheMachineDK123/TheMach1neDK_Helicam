@@ -3,8 +3,8 @@ fx_version 'cerulean'
 
  lua54 'yes'
 
- name 'dp_heli_cam'
- author 'Cascade'
+ name 'TheMach1neDK Helicam'
+ author 'TheMach1neDK'
  version '1.0.0'
 
  ui_page 'html/index.html'
