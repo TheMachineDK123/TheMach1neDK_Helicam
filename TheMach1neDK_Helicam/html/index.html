@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DP HeliCam</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="root" class="hidden">
+    <div class="topbar">
+      <div class="topbar-left">
+        <div class="brand">HELI-CAM</div>
+        <div class="sub">DANSK POLITI</div>
+        <div id="recLabel" class="rec-label hidden">OPTAGER</div>
+      </div>
+      <div class="topbar-right">
+        <span id="stLocked" class="pill">ULÅST</span>
+        <span id="stRec" class="pill">NORMAL</span>
+        <span id="stSpot" class="pill">SPOT: OFF</span>
+        <span id="stNV" class="pill">NV: OFF</span>
+        <span id="stTH" class="pill">TH: OFF</span>
+      </div>
+    </div>
+
+    <div class="hud">
+      <div class="panel panel-left">
+        <div class="panel-head">
+          <div class="panel-title">TELEMETRI</div>
+          <div class="panel-tag">DP-HELI</div>
+        </div>
+        <div class="grid2">
+          <div class="card">
+            <div class="label">ALT</div>
+            <div class="value" id="alt">-</div>
+          </div>
+          <div class="card">
+            <div class="label">HDG</div>
+            <div class="value" id="hdg">-</div>
+          </div>
+
+          <div class="card card-wide">
+            <div class="label">GPS</div>
+            <div class="value mono" id="gps">-</div>
+          </div>
+
+          <div class="card">
+            <div class="label">FOV</div>
+            <div class="value" id="fov">-</div>
+          </div>
+          <div class="card">
+            <div class="label">AFSTAND</div>
+            <div class="value" id="dist">-</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel-right">
+        <div class="panel-head">
+          <div class="panel-title">Information</div>
+          <div class="panel-tag">ANPG</div>
+        </div>
+
+        <div class="stack">
+          <div class="card">
+            <div class="label">KØRETØJ</div>
+            <div class="value value-md" id="model">-</div>
+          </div>
+
+          <div class="grid2">
+            <div class="card">
+              <div class="label">NR. PLADE</div>
+              <div class="value mono value-md" id="plate">-</div>
+            </div>
+            <div class="card">
+              <div class="label">HASTIGHED</div>
+              <div class="value value-md" id="speed">-</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="label">KONTROLLER</div>
+            <div class="controls">
+              <div class="chip">H: Åbn/Luk</div>
+              <div class="chip">E: Lås mål</div>
+              <div class="chip">R: REC/NORMAL</div>
+              <div class="chip">G: Spotlys</div>
+              <div class="chip">K: Kopiér nr.</div>
+              <div class="chip">ESC: Luk</div>
+              <div class="chip">N: Natkikkert</div>
+              <div class="chip">L: Termisk</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="crosshair">
+        <div class="h"></div>
+        <div class="v"></div>
+      </div>
+
+      <div class="toast" id="toast">Kopieret</div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
